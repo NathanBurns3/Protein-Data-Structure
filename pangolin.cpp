@@ -35,11 +35,13 @@ bool get_id_and_sequence(std::ifstream &file, std::string &id,
                          std::string &sequence) {
   if (!(!!std::getline(file, id))) {
     return false;
-  };
-  if (!(!!std::getline(file, sequence))) {
+  }
+  else if (!(!!std::getline(file, sequence))) {
     return false;
-  };
+  }
+  else {
     return true;
+  }
 }
 
 /*
